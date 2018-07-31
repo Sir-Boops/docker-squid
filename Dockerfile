@@ -13,4 +13,5 @@ RUN apk -U upgrade && \
     ./configure --prefix=/opt/squid && \
     make -j$(nproc) && \
     make install && \
-    apk del --purge deps
+    apk del --purge deps && \
+    rm -rf ~/*
